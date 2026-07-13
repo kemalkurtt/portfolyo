@@ -28,3 +28,18 @@ const gozlemci = new IntersectionObserver((entries) => {
 // Sitedeki tüm "gizli" sınıfına sahip öğeleri bul ve gözlemlemeye başla
 const gizliOgeler = document.querySelectorAll('.gizli');
 gizliOgeler.forEach((oge) => gozlemci.observe(oge));
+// --- YAZI YAZMA EFEKTİ (TYPEWRITER) ---
+const metinAlani = document.getElementById('yazilan-metin');
+const metin = "A computer engineering student who turns mathematical logic into code.";
+let harfIndeksi = 0;
+
+function yaziyiYaz() {
+    if (harfIndeksi < metin.length) {
+        metinAlani.innerHTML += metin.charAt(harfIndeksi);
+        harfIndeksi++;
+        setTimeout(yaziyiYaz, 50); // Harflerin yazılma hızı (50ms)
+    }
+}
+
+// Sayfa yüklendiğinde efekti başlat
+window.onload = yaziyiYaz;

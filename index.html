@@ -5,16 +5,17 @@
     <title>Kemal - Kişisel Portföy</title>
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
 </head>
 <body>
 
     <nav>
         <ul>
-            <li><a href="#hakkimda">Hakkımda</a></li>
-            <li><a href="#yetenekler">Yetenekler</a></li>
-            <li><a href="#hobiler">Hobiler</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
+            <li><a href="#hakkimda">About</a></li>
+            <li><a href="#yetenekler">Skills</a></li>
+            <li><a href="#hobiler">Interests</a></li>
+            <li><a href="#iletisim">Contact</a></li>
             <li><button id="tema-butonu">🌙</button></li>
         </ul>
     </nav>
@@ -22,12 +23,21 @@
     <div class="ana-icerik">
         <div class="profil-karti">
             
-            <h1>Merhaba, Ben Kemal!</h1>
-            <img src="profil.jpg" alt="Kemal Profil Fotoğrafı">
+            <img src="profil.jpg" alt="Kemal Profile Picture">
+            <h1>Hi, I'm Kemal.</h1>
+            <p class="alt-baslik">
+                <span id="yazilan-metin"></span><span class="imlec">|</span>
+            </p>
             
-            <section id="hakkimda">
-                <h2>Hakkımda</h2>
-                <p>Bilgisayar Mühendisliği öğrencisiyim ve yazılım dünyasına yeni adım atıyorum. Bu sayfa benim kişisel serüvenimi ve projelerimi barındıracak.</p>
+            <div class="sosyal-ikonlar">
+                <a href="https://github.com/kemalkurtt" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <section id="hakkimda" class="gizli">
+                <h2>About Me</h2>
+                <p>My academic journey started in mathematics in 2020. Driven by a desire to apply my analytical foundation to a more dynamic field, I transferred to computer engineering in 2023. As I wrap up my final undergraduate courses, I am actively building projects with modern web technologies and database systems, bringing ideas to life through code.</p>
             </section>
 
             <section id="yetenekler">
@@ -82,6 +92,10 @@
                     <textarea id="mesaj" rows="5" placeholder="Mesajınız..." required></textarea>
                     <button type="submit" class="gonder-butonu">Gönder</button>
                 </form>
+            </section>
+            <section id="muzik" class="gizli">
+                <h2>Kod Yazarken Dinlediklerim</h2>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3n3Ppam7vgaBg1sSYFcNMy?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </section>
 
         </div> </div> <script src="script.js"></script>
