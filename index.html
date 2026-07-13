@@ -4,11 +4,52 @@
     <meta charset="UTF-8">
     <title>Kemal - Kişisel Portföy</title>
     <style>
+        /* Pürüzsüz kaydırma efekti (Tıklayınca yağ gibi kayması için) */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #f0f2f5;
             font-family: Arial, sans-serif;
             color: #333333;
-            /* Tüm sayfayı ortalamak için */
+            margin: 0; /* Navbar'ın sayfanın kenarlarına tam yapışması için */
+            padding: 0;
+        }
+        
+        /* --- YENİ EKLENEN NAVBAR TASARIMI --- */
+        nav {
+            background-color: #0056b3;
+            position: sticky; /* Sayfa kaydırıldığında üstte takılı kalır */
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Menünün her zaman diğer içeriklerin üstünde kalmasını sağlar */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Hafif alt gölge */
+        }
+
+        nav ul {
+            list-style-type: none; /* Noktaları kaldırır */
+            margin: 0;
+            padding: 15px 0;
+            display: flex; /* Yan yana dizer */
+            justify-content: center;
+            gap: 40px; /* Butonlar arası boşluk */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none; /* Alt çizgiyi kaldırır */
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s; /* Üzerine gelince rengin yumuşakça değişmesi için */
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00; /* Fareyle üzerine gelince sarı/altın rengi olur */
+        }
+
+        /* --- ANA İÇERİK TASARIMI --- */
+        .ana-icerik {
             display: flex;
             justify-content: center;
             padding: 40px;
@@ -20,7 +61,6 @@
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             max-width: 600px;
-            /* İçeriklerin alt alta ortalanarak dizilmesi için */
             display: flex;
             flex-direction: column;
             align-items: center; 
@@ -29,62 +69,78 @@
 
         img {
             width: 200px;
-            height: 200px; /* Genişlik ve yükseklik eşitlendi */
-            object-fit: cover; /* Fotoğrafın ezilmeden kareye sığmasını sağlar */
+            height: 200px;
+            object-fit: cover;
             border-radius: 50%;
             border: 4px solid #0056b3;
             margin-bottom: 20px;
         }
         
-        h1 {
-            color: #0056b3;
-            margin-bottom: 5px;
-            margin-top: 0;
-        }
-
-        h2 {
-            margin-top: 25px;
-            color: #444;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-            width: 100%;
+        h1 { color: #0056b3; margin-bottom: 5px; margin-top: 0; }
+        
+        h2 { 
+            margin-top: 40px; 
+            color: #444; 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 5px; 
+            width: 100%; 
         }
         
-        ul {
+        .profil-karti ul {
             text-align: left;
             line-height: 1.8;
             width: 90%; 
+            padding-left: 20px; /* İçerik listelerini biraz daha düzenli hizalar */
+        }
+
+        /* Tıklanan başlığın Navbar'ın altında ezilmemesi için görünmez bir boşluk */
+        section {
+            scroll-margin-top: 80px; 
         }
     </style>
 </head>
 <body>
 
-    <!-- KART BURADA BAŞLIYOR -->
-    <div class="profil-karti">
-        
-        <h1>Merhaba, Ben Kemal!</h1>
-        <img src="profil.jpg" alt="Kemal Profil Fotoğrafı">
-        
-        <h2>Hakkımda</h2>
-        <p>Bilgisayar Mühendisliği öğrencisiyim ve yazılım dünyasına yeni adım atıyorum. Bu sayfa benim kişisel serüvenimi ve projelerimi barındıracak.</p>
-
-        <h2>Eğitim ve Yetenekler</h2>
+    <nav>
         <ul>
-            <li>Bilgisayar Mühendisliği (Güçlü bir Matematik altyapısı ile)</li>
-            <li>Veritabanı Sistemleri ve Programlama 1 pratikleri</li>
-            <li>Analitik düşünme ve algoritma kurma</li>
+            <li><a href="#hakkimda">Hakkımda</a></li>
+            <li><a href="#yetenekler">Yetenekler</a></li>
+            <li><a href="#hobiler">Hobiler</a></li>
         </ul>
+    </nav>
 
-        <h2>İlgi Alanlarım ve Hobilerim</h2>
-        <ul>
-            <li>Futbol ve bilgisayar oyunları</li>
-            <li>Otomobil bakımı ve mekaniği</li>
-            <li>Fit mutfak denemeleri</li>
-            <li>Vücut geliştirme</li>
-        </ul>
+    <div class="ana-icerik">
+        <div class="profil-karti">
+            
+            <h1>Merhaba, Ben Kemal!</h1>
+            <img src="profil.jpg" alt="Kemal Profil Fotoğrafı">
+            
+            <section id="hakkimda">
+                <h2>Hakkımda</h2>
+                <p>Bilgisayar Mühendisliği öğrencisiyim ve yazılım dünyasına yeni adım atıyorum. Bu sayfa benim kişisel serüvenimi ve projelerimi barındıracak.</p>
+            </section>
 
+            <section id="yetenekler">
+                <h2>Eğitim ve Yetenekler</h2>
+                <ul>
+                    <li>Bilgisayar Mühendisliği (Güçlü bir Matematik altyapısı ile)</li>
+                    <li>Veritabanı Sistemleri ve Programlama 1 pratikleri</li>
+                    <li>Analitik düşünme ve algoritma kurma</li>
+                </ul>
+            </section>
+
+            <section id="hobiler">
+                <h2>İlgi Alanlarım ve Hobilerim</h2>
+                <ul>
+                    <li>Futbol ve bilgisayar oyunları</li>
+                    <li>Otomobil bakımı ve mekaniği</li>
+                    <li>Fit mutfak denemeleri</li>
+                    <li>Vücut geliştirme</li>
+                </ul>
+            </section>
+
+        </div>
     </div>
-    <!-- KART BURADA BİTİYOR -->
 
 </body>
 </html>
