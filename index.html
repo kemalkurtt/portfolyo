@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kemal - Kişisel Portföy</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            /* Tüm sayfayı ortalamak için */
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .profil-karti {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            /* İçeriklerin alt alta ortalanarak dizilmesi için */
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            height: 200px; /* Genişlik ve yükseklik eşitlendi */
+            object-fit: cover; /* Fotoğrafın ezilmeden kareye sığmasını sağlar */
+            border-radius: 50%;
+            border: 4px solid #0056b3;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #0056b3;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        h2 {
+            margin-top: 25px;
+            color: #444;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            width: 100%;
+        }
+        
+        ul {
+            text-align: left;
+            line-height: 1.8;
+            width: 90%; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- KART BURADA BAŞLIYOR -->
+    <div class="profil-karti">
+        
+        <h1>Merhaba, Ben Kemal!</h1>
+        <img src="profil.jpg" alt="Kemal Profil Fotoğrafı">
+        
+        <h2>Hakkımda</h2>
+        <p>Bilgisayar Mühendisliği öğrencisiyim ve yazılım dünyasına yeni adım atıyorum. Bu sayfa benim kişisel serüvenimi ve projelerimi barındıracak.</p>
+
+        <h2>Eğitim ve Yetenekler</h2>
+        <ul>
+            <li>Bilgisayar Mühendisliği (Güçlü bir Matematik altyapısı ile)</li>
+            <li>Veritabanı Sistemleri ve Programlama 1 pratikleri</li>
+            <li>Analitik düşünme ve algoritma kurma</li>
+        </ul>
+
+        <h2>İlgi Alanlarım ve Hobilerim</h2>
+        <ul>
+            <li>Futbol ve bilgisayar oyunları</li>
+            <li>Otomobil bakımı ve mekaniği</li>
+            <li>Fit mutfak denemeleri</li>
+            <li>Vücut geliştirme</li>
+        </ul>
+
+    </div>
+    <!-- KART BURADA BİTİYOR -->
+
+</body>
+</html>
