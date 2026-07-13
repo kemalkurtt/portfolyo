@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Kemal - Kişisel Portföy</title>
     <style>
-        /* Pürüzsüz kaydırma efekti (Tıklayınca yağ gibi kayması için) */
         html {
             scroll-behavior: smooth;
         }
@@ -13,42 +12,40 @@
             background-color: #f0f2f5;
             font-family: Arial, sans-serif;
             color: #333333;
-            margin: 0; /* Navbar'ın sayfanın kenarlarına tam yapışması için */
+            margin: 0;
             padding: 0;
         }
         
-        /* --- YENİ EKLENEN NAVBAR TASARIMI --- */
         nav {
             background-color: #0056b3;
-            position: sticky; /* Sayfa kaydırıldığında üstte takılı kalır */
+            position: sticky;
             top: 0;
             width: 100%;
-            z-index: 1000; /* Menünün her zaman diğer içeriklerin üstünde kalmasını sağlar */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Hafif alt gölge */
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         nav ul {
-            list-style-type: none; /* Noktaları kaldırır */
+            list-style-type: none;
             margin: 0;
             padding: 15px 0;
-            display: flex; /* Yan yana dizer */
+            display: flex;
             justify-content: center;
-            gap: 40px; /* Butonlar arası boşluk */
+            gap: 40px;
         }
 
         nav ul li a {
             color: white;
-            text-decoration: none; /* Alt çizgiyi kaldırır */
+            text-decoration: none;
             font-weight: bold;
             font-size: 16px;
-            transition: color 0.3s; /* Üzerine gelince rengin yumuşakça değişmesi için */
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #ffcc00; /* Fareyle üzerine gelince sarı/altın rengi olur */
+            color: #ffcc00;
         }
 
-        /* --- ANA İÇERİK TASARIMI --- */
         .ana-icerik {
             display: flex;
             justify-content: center;
@@ -90,10 +87,9 @@
             text-align: left;
             line-height: 1.8;
             width: 90%; 
-            padding-left: 20px; /* İçerik listelerini biraz daha düzenli hizalar */
+            padding-left: 20px;
         }
 
-        /* Tıklanan başlığın Navbar'ın altında ezilmemesi için görünmez bir boşluk */
         section {
             scroll-margin-top: 80px; 
         }
