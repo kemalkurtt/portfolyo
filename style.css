@@ -11,13 +11,14 @@ body {
     transition: background-color 0.4s, color 0.4s;
 }
 
+/* --- NAVBAR (KOYU GRİ) --- */
 nav {
-    background-color: #0056b3;
+    background-color: #2b2b2b; /* Eski saks mavisi yerine şık koyu gri */
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 nav ul {
@@ -31,7 +32,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: white; /* Yazılar beyaz kalmaya devam ediyor */
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
@@ -75,16 +76,18 @@ nav ul li a:hover {
     transition: background-color 0.4s, box-shadow 0.4s;
 }
 
+/* --- FOTOĞRAF ÇERÇEVESİ --- */
 img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #0056b3;
+    border: 4px solid #2b2b2b; /* Çerçeve de koyu gri oldu */
     margin-bottom: 20px;
 }
 
-h1 { color: #0056b3; margin-bottom: 5px; margin-top: 0; }
+/* --- BAŞLIK RENGİ --- */
+h1 { color: #2b2b2b; margin-bottom: 5px; margin-top: 0; }
 
 h2 { 
     margin-top: 40px; 
@@ -122,12 +125,12 @@ section {
 .kart:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    border-color: #0056b3;
+    border-color: #2b2b2b; /* Kart vurgusu da koyu gri */
 }
 
 .kart h3 {
     margin-top: 0;
-    color: #0056b3;
+    color: #2b2b2b; /* Kart başlıkları da koyu gri */
     font-size: 16px;
     transition: color 0.4s;
 }
@@ -140,6 +143,7 @@ section {
     transition: color 0.4s;
 }
 
+/* --- GECE MODU (DARK MODE) AYARLARI --- */
 body.karanlik-tema {
     background-color: #121212;
     color: #ffffff;
@@ -156,7 +160,7 @@ body.karanlik-tema h2 {
 }
 
 body.karanlik-tema h1 {
-    color: #66b3ff;
+    color: #e0e0e0; /* Gece modunda başlık gümüş/beyaz */
 }
 
 body.karanlik-tema .kart {
@@ -165,7 +169,7 @@ body.karanlik-tema .kart {
 }
 
 body.karanlik-tema .kart h3 {
-    color: #66b3ff;
+    color: #e0e0e0;
 }
 
 body.karanlik-tema .kart p {
@@ -173,5 +177,5 @@ body.karanlik-tema .kart p {
 }
 
 body.karanlik-tema img {
-    border-color: #66b3ff;
+    border-color: #e0e0e0;
 }
