@@ -9,3 +9,10 @@ temaButonu.addEventListener('click', () => {
         temaButonu.textContent = '🌙';
     }
 });
+const iletisimFormu = document.getElementById('iletisim-formu');
+
+iletisimFormu.addEventListener('submit', (e) => {
+    e.preventDefault(); // Butona basınca sayfanın yenilenmesini engeller
+    alert('Mesajınız başarıyla gönderildi! (Bu şu anlık bir test bildirimidir)');
+    iletisimFormu.reset(); // Gönderdikten sonra formun içini tertemiz yapar
+});

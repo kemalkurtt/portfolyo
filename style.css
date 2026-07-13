@@ -178,4 +178,66 @@ body.karanlik-tema .kart p {
 
 body.karanlik-tema img {
     border-color: #e0e0e0;
+}/* --- İLETİŞİM FORMU --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s, background-color 0.4s, color 0.4s;
+}
+
+input:focus, textarea:focus {
+    outline: none; /* Tıklayınca çıkan mavi varsayılan çizgiyi kaldırır */
+    border-color: #2b2b2b; /* Odaklanınca bizim antrasit rengimizi alır */
+}
+
+.gonder-butonu {
+    background-color: #2b2b2b;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.gonder-butonu:hover {
+    background-color: #444;
+    transform: translateY(-2px); /* Üzerine gelince çok hafif yukarı kalkar */
+}
+
+/* --- Form Gece Modu Ayarları --- */
+body.karanlik-tema input, 
+body.karanlik-tema textarea {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #ffffff;
+}
+
+body.karanlik-tema input::placeholder, 
+body.karanlik-tema textarea::placeholder {
+    color: #888;
+}
+
+body.karanlik-tema .gonder-butonu {
+    background-color: #e0e0e0;
+    color: #121212;
+}
+
+body.karanlik-tema .gonder-butonu:hover {
+    background-color: #ffffff;
 }
