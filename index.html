@@ -57,7 +57,8 @@
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 600px;
+            max-width: 800px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center; 
@@ -82,16 +83,48 @@
             padding-bottom: 5px; 
             width: 100%; 
         }
-        
-        .profil-karti ul {
-            text-align: left;
-            line-height: 1.8;
-            width: 90%; 
-            padding-left: 20px;
-        }
 
         section {
             scroll-margin-top: 80px; 
+            width: 100%;
+        }
+
+        .kart-izgarasi {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        .kart {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .kart:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-color: #0056b3;
+        }
+
+        .kart h3 {
+            margin-top: 0;
+            color: #0056b3;
+            font-size: 16px;
+        }
+
+        .kart p {
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
         }
     </style>
 </head>
@@ -118,21 +151,46 @@
 
             <section id="yetenekler">
                 <h2>Eğitim ve Yetenekler</h2>
-                <ul>
-                    <li>Bilgisayar Mühendisliği (Güçlü bir Matematik altyapısı ile)</li>
-                    <li>Veritabanı Sistemleri ve Programlama 1 pratikleri</li>
-                    <li>Analitik düşünme ve algoritma kurma</li>
-                </ul>
+                <div class="kart-izgarasi">
+                    <div class="kart">
+                        <h3>Mühendislik & Matematik</h3>
+                        <p>Güçlü bir matematik altyapısıyla desteklenmiş bilgisayar mühendisliği eğitimi.</p>
+                    </div>
+                    <div class="kart">
+                        <h3>Veritabanı Sistemleri</h3>
+                        <p>Veritabanı tasarımı, yönetimi ve temel SQL pratikleri çalışmaları.</p>
+                    </div>
+                    <div class="kart">
+                        <h3>Yazılım Temelleri</h3>
+                        <p>Programlama 1 pratikleri, analitik düşünme ve temel algoritma geliştirme yetenekleri.</p>
+                    </div>
+                </div>
             </section>
 
             <section id="hobiler">
                 <h2>İlgi Alanlarım ve Hobilerim</h2>
-                <ul>
-                    <li>Futbol ve bilgisayar oyunları</li>
-                    <li>Otomobil bakımı ve mekaniği</li>
-                    <li>Fit mutfak denemeleri</li>
-                    <li>Vücut geliştirme</li>
-                </ul>
+                <div class="kart-izgarasi">
+                    <div class="kart">
+                        <h3>Spor & Oyun</h3>
+                        <p>Futbol oynamak, takip etmek ve bilgisayar oyunları ile vakit geçirmek.</p>
+                    </div>
+                    <div class="kart">
+                        <h3>Otomobil Mekaniği</h3>
+                        <p>Araç bakımı, motor mekanikleri ve teknik detaylarla ilgilenmek.</p>
+                    </div>
+                    <div class="kart">
+                        <h3>Fit Mutfak Sanatları</h3>
+                        <p>Az yağ, bolca protein, max lezzet.</p>
+                    </div>
+                    <div class="kart">
+                        <h3>Kahve Sanatı</h3>
+                        <p>Tercihen amerikano filtre gibi sert kahveler .</p>
+                    </div>
+                    <div class="kart">
+                        <h3>Vücut Geliştirme, Fitness</h3>
+                        <p>Düzenli olarak vücut geliştirme ve fiziksel aktivite disiplini.</p>
+                    </div>
+                </div>
             </section>
 
         </div>
