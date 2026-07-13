@@ -240,4 +240,14 @@ body.karanlik-tema .gonder-butonu {
 
 body.karanlik-tema .gonder-butonu:hover {
     background-color: #ffffff;
+}/* --- SCROLL ANIMASYONLARI --- */
+.gizli {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.goster {
+    opacity: 1;
+    transform: translateY(0);
 }

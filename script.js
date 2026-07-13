@@ -16,3 +16,15 @@ iletisimFormu.addEventListener('submit', (e) => {
     alert('Mesajınız başarıyla gönderildi! (Bu şu anlık bir test bildirimidir)');
     iletisimFormu.reset(); // Gönderdikten sonra formun içini tertemiz yapar
 });
+// Sayfa kaydırıldıkça öğeleri yakalayacak gözlemci
+const gozlemci = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('goster');
+        }
+    });
+});
+
+// Sitedeki tüm "gizli" sınıfına sahip öğeleri bul ve gözlemlemeye başla
+const gizliOgeler = document.querySelectorAll('.gizli');
+gizliOgeler.forEach((oge) => gozlemci.observe(oge));
