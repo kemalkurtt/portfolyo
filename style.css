@@ -123,4 +123,22 @@ body.karanlik-tema textarea {
     background-color: #0a0a0a;
     border-color: #333333;
     color: #ffffff;
+}/* Profil fotoğrafını düzeltir */
+.profil-karti img {
+    width: 150px;       /* Fotoğrafın boyutunu küçültür */
+    height: 150px;      /* Kare olmasını sağlar */
+    border-radius: 50%; /* Fotoğrafı yuvarlak yapar */
+    object-fit: cover;  /* Fotoğrafın yamulmasını engeller */
+    margin-bottom: 20px;
+    border: 3px solid #fff; /* Çok şık bir çerçeve ekler */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Profil kartını ortalar */
+.profil-karti {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
